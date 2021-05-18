@@ -42,6 +42,8 @@ module.exports = {
 
       black: '#000000',
       white: '#ffffff',
+      backgroundColor: '#212121',
+      backgroundColor100: '#262626',
 
       danger900: '#5C0011',
       danger800: '#820014',
@@ -103,18 +105,27 @@ module.exports = {
       full: '999px',
     },
     extend: {
+      keyframes: {
+        bounceX: {
+          '0%, 100%': { transform: 'translateX(-25%)' },
+          '50%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        bounceX: 'bounceX 1s infinite',
+      },
       maxWidth: {
         50: '50%',
       },
       boxShadow: {
-        shadow100: '0rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.2)',
-        shadow200: '0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.2)',
-        shadow300: '0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2)',
-        shadow400: '0rem 0.625rem 1.5rem rgba(0, 0, 0, 0.2)',
-        'shadow100-inner': 'inset 0rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.2)',
-        'shadow200-inner': 'inset 0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.2)',
-        'shadow300-inner': 'inset 0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2)',
-        'shadow400-inner': 'inset 0rem 0.625rem 1.5rem rgba(0, 0, 0, 0.2)',
+        shadow100: '0rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.5)',
+        shadow200: '0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.5)',
+        shadow300: '0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5)',
+        shadow400: '0rem 0.625rem 1.5rem rgba(0, 0, 0, 0.5)',
+        'shadow100-inner': 'inset 0rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.5)',
+        'shadow200-inner': 'inset 0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.5)',
+        'shadow300-inner': 'inset 0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5)',
+        'shadow400-inner': 'inset 0rem 0.625rem 1.5rem rgba(0, 0, 0, 0.5)',
       },
     },
   },
