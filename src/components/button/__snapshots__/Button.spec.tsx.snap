@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render button 1`] = `
+<button
+  class="bg-primary400 text-danger50"
+>
+  Hello
+</button>
+`;
