@@ -6,7 +6,7 @@ import logo from 'url:./images/logo.svg';
 export const DeskHeader: React.FC = () => {
   const [animation, setAnimation] = React.useState(false);
   return (
-    <header className="hidden sm:flex bg-backgroundColor100 shadow-shadow100 mb-700 py-[21px]">
+    <header className="hidden sm:flex bg-backgroundColor100 shadow-shadow100 mb-700 py-500 sticky top-0 left-0 z-50 w-full">
       <div className="flex flex-row justify-between items-center text-gray700 mx-auto w-[1200px]  px-400">
         <a
           onMouseOver={() => setAnimation(true)}
