@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../../components/button/Button';
 import { Container } from './components/Container';
 import { DeskHeader } from './components/DeskHeader';
 import { StatementChart } from './components/StatementChart';
@@ -31,6 +32,7 @@ const Payments = () => {
               <p className="text-font300 text-white font-normal">
                 Faça um pagamento PIX para qualquer banco de forma imediata
               </p>
+              <Button full>Teste do btn</Button>
             </section>
           </div>
         </main>

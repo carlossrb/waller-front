@@ -15,7 +15,7 @@ export const DeskHeader: React.FC = () => {
           className="text-font200 hover:opacity-75 space-x-200 text-primary300 inline-flex items-center"
         >
           <div className={`${animation ? 'animate-bounceX' : ''}`}>
-            <img src={arrowLeft} width={16} height={12} />
+            <img src={arrowLeft} width={16} height={12} alt="Botão de retornar" />
           </div>
           <span>Voltar</span>
         </a>
