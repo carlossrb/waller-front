@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "predev": "rm -rf .parcel-cache",
-    "dev": "parcel serve index.html",
+    "dev": "parcel serve index.html --no-source-maps --no-cache",
     "build": "parcel build index.html",
     "lint": "eslint --fix --ext ts,tsx .",
     "test": "jest"

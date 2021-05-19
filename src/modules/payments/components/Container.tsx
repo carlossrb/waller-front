@@ -1,11 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-type ContainerProps = {
-  name?: string;
-};
-
-export const Container: React.FC<ContainerProps> = ({ name, children }) => {
+export const Container: React.FC = ({ children }) => {
   return (
     <div
       className={cn(

@@ -15,14 +15,14 @@ export const kinds = {
     'hover:text-primary400 hover:ring-primary400',
     'focus:text-primary400 focus:ring-primary400',
     'active:bg-primary500 active:text-white active:ring-primary500',
-    'disabled:bg-gray200 disabled:ring-gray400 disabled:text-gray400'
+    'disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400'
   ),
   secondary: cn(
-    'bg-primary500 text-white',
-    'hover:bg-primary400',
-    'focus:bg-primary400',
-    'active:bg-primary400',
-    'disabled:bg-gray400 disabled:text-gray200'
+    'bg-primary400 text-white',
+    'hover:bg-primary500',
+    'focus:bg-primary500',
+    'active:bg-primary500',
+    'disabled:bg-backgroundColor disabled:text-gray200'
   ),
   tertiary: cn(
     'text-primary500',
@@ -46,7 +46,6 @@ type ButtonProps = {
   spacing?: boolean;
   autoFocus?: boolean;
   disabled?: boolean;
-  danger?: boolean;
   loading?: boolean;
   full?: boolean;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
@@ -64,7 +63,6 @@ export const Button: FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Butto
     onClick,
     disabled,
     full,
-    danger,
     loading,
     className,
     type,
@@ -83,7 +81,6 @@ export const Button: FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Butto
         disabled ? 'cursor-default' : 'cursor-pointer',
         {
           ['w-full']: full,
-          [dangerCss]: danger && !disabled,
           ['p-0']: ['link'].includes(kind) && spacing === false,
         },
         className
