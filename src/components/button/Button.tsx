@@ -14,15 +14,15 @@ export const kinds = {
     'ring-primary500 ring-1 ring-inset text-primary500',
     'hover:text-primary400 hover:ring-primary400',
     'focus:text-primary400 focus:ring-primary400',
-    'active:bg-primary500 active:text-gray50 active:ring-primary500',
-    'disabled:bg-white disabled:ring-gray200 disabled:text-gray400'
+    'active:bg-primary500 active:text-white active:ring-primary500',
+    'disabled:bg-gray200 disabled:ring-gray400 disabled:text-gray400'
   ),
   secondary: cn(
     'bg-primary500 text-white',
     'hover:bg-primary400',
     'focus:bg-primary400',
     'active:bg-primary400',
-    'disabled:bg-gray50 disabled:text-gray400'
+    'disabled:bg-gray400 disabled:text-gray200'
   ),
   tertiary: cn(
     'text-primary500',

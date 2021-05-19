@@ -44,6 +44,9 @@ module.exports = {
       white: '#ffffff',
       backgroundColor: '#212121',
       backgroundColor100: '#262626',
+      gray400: '#7d7d7d',
+      gray300: '#969696',
+      gray200: '#bdbdbd',
 
       danger900: '#5C0011',
       danger800: '#820014',
