@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button } from '../../components/button/Button';
 import { Container } from './components/Container';
 import { DeskHeader } from './components/DeskHeader';
 import { StatementChart } from './cards/StatementChart';
 import { Withdraw } from './cards/Withdraw';
+import { Deposit } from './cards/Deposit';
+import { Payment } from './cards/Payment';
 
-const Payments = () => {
+const Transactions = () => {
   return (
     <div>
       <DeskHeader />
@@ -17,22 +18,13 @@ const Payments = () => {
               <StatementChart />
             </section>
             <section className="flex flex-col">
-              <h2 className="text-center">Realizar um depósito</h2>
-              <p className="text-font300 text-white font-normal">
-                Aqui você pode colocar guardar seu dinheiro para que ele possa render na sua conta
-              </p>
+              <Deposit />
             </section>
             <section className="flex flex-col">
               <Withdraw />
             </section>
             <section className="flex flex-col">
-              <h2 className="text-center">Realizar um pagamento</h2>
-              <p className="text-font300 text-white font-normal">
-                Faça um pagamento PIX para qualquer banco de forma imediata
-              </p>
-              <Button full size="xs" loading disabled>
-                Teste do btn
-              </Button>
+              <Payment />
             </section>
           </div>
         </main>
@@ -41,4 +33,4 @@ const Payments = () => {
   );
 };
 
-export default Payments;
+export default Transactions;

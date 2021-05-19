@@ -11,32 +11,18 @@ export const sizes = {
 
 export const kinds = {
   primary: cn(
-    'ring-primary500 ring-1 ring-inset text-primary500',
-    'hover:text-primary400 hover:ring-primary400',
-    'focus:text-primary400 focus:ring-primary400',
-    'active:bg-primary500 active:text-white active:ring-primary500',
+    'ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor',
+    'hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor',
+    'focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor',
+    'active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100',
     'disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400'
   ),
   secondary: cn(
-    'bg-primary400 text-white',
-    'hover:bg-primary500',
-    'focus:bg-primary500',
-    'active:bg-primary500',
+    'bg-inputMoneyColor text-backgroundColor ring-1 ring-inset ring-inputMoneyColor',
+    'hover:bg-inputMoneyColor100 ring-inputMoneyColor100',
+    'focus:bg-inputMoneyColor100 ring-inputMoneyColor100',
+    'active:bg-inputMoneyColor100 ring-inputMoneyColor100',
     'disabled:bg-backgroundColor disabled:text-gray200'
-  ),
-  tertiary: cn(
-    'text-primary500',
-    'hover:text-primary400',
-    'focus:text-primary400',
-    'active:text-primary300',
-    'disabled:text-gray400'
-  ),
-  link: cn(
-    'text-primary500 underline',
-    'hover:text-primary400',
-    'focus:text-primary400',
-    'active:text-primary300',
-    'disabled:text-gray400'
   ),
 };
 

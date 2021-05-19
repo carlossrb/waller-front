@@ -18,7 +18,7 @@ export const Withdraw = () => {
         className="flex flex-col items-start justify-center h-full text-gray200 font-normal text-font200"
       >
         <label className="mb-100">Valor</label>
-        <Input left={<div>R$</div>} className="mb-400" />
+        <Input left={<div>R$</div>} className="mb-400" type="number" />
         <Button full type="submit">
           Retirar agora!
         </Button>
