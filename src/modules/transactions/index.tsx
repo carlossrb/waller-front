@@ -14,17 +14,19 @@ const Transactions = () => {
         <main className="h-full flex flex-col">
           <h1 className="text-font600 font-bold text-primary400">Transações</h1>
           <div className="flex flex-col gap-400 sm:grid sm:grid-cols-2 sm:grid-rows-2 mt-200 h-full text-primary200 font-medium text-font400">
-            <section className="h-[300px]">
+            <section className="h-[368px]">
               <StatementChart />
             </section>
             <section className="flex flex-col">
-              <Deposit />
-            </section>
-            <section className="flex flex-col">
               <Withdraw />
+              <div className="border-gray300 border-b sm:hidden py-300" />
             </section>
             <section className="flex flex-col">
               <Payment />
+              <div className="border-gray300 border-b sm:hidden py-300" />
+            </section>
+            <section className="flex flex-col">
+              <Deposit />
             </section>
           </div>
         </main>
