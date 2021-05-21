@@ -11,7 +11,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const development = process.env.NODE_ENV ===    'development';
+const development = process.env.NODE_ENV === 'development';
 
 ReactDOM.render(
   <ApolloProvider client={client}>
