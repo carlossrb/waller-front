@@ -2,7 +2,72 @@
 
 exports[`Button should render button 1`] = `
 <button
-  class="bg-primary400 text-danger50"
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-500 py-300 text-font300 ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100 disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400 cursor-pointer"
+>
+  Hello
+</button>
+`;
+
+exports[`Button should render disabled button 1`] = `
+<button
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-500 py-300 text-font300 ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100 disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400 cursor-default"
+  disabled=""
+>
+  Hello
+</button>
+`;
+
+exports[`Button should render full button 1`] = `
+<button
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-500 py-300 text-font300 ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100 disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400 cursor-pointer w-full"
+>
+  Hello
+</button>
+`;
+
+exports[`Button should render large button 1`] = `
+<button
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-600 py-400 text-font300 ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100 disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400 cursor-pointer"
+>
+  Hello
+</button>
+`;
+
+exports[`Button should render medium button 1`] = `
+<button
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-500 py-300 text-font300 ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100 disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400 cursor-pointer"
+>
+  Hello
+</button>
+`;
+
+exports[`Button should render primary button 1`] = `
+<button
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-500 py-300 text-font300 ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100 disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400 cursor-pointer"
+>
+  Hello
+</button>
+`;
+
+exports[`Button should render secondary button 1`] = `
+<button
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-500 py-300 text-font300 bg-inputMoneyColor text-backgroundColor ring-1 ring-inset ring-inputMoneyColor hover:bg-inputMoneyColor100 ring-inputMoneyColor100 focus:bg-inputMoneyColor100 ring-inputMoneyColor100 active:bg-inputMoneyColor100 ring-inputMoneyColor100 disabled:bg-backgroundColor disabled:text-gray200 cursor-pointer"
+>
+  Hello
+</button>
+`;
+
+exports[`Button should render small button 1`] = `
+<button
+  aria-label="solid-button"
+  class="inline-flex justify-center items-center rounded-200 font-bold focus:outline-none transition-colors duration-300 px-400 py-200 text-font200 ring-outputMoneyColor bg-backgroundColor200 ring-1 ring-inset text-outputMoneyColor hover:text-backgroundColor hover:ring-outputMoneyColor100 hover:bg-outputMoneyColor focus:text-backgroundColor focus:ring-outputMoneyColor100 hover:bg-outputMoneyColor active:bg-outputMoneyColor100 active:text-backgroundColor active:ring-outputMoneyColor100 disabled:bg-backgroundColor disabled:ring-gray400 disabled:text-gray400 cursor-pointer"
 >
   Hello
 </button>
