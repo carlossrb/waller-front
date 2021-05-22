@@ -12,7 +12,6 @@ export type InputProps = {
   size?: keyof typeof sizes;
   error?: boolean;
   autoFocus?: boolean;
-  clear?: boolean;
   onChange?: (v: string) => void;
   value?: string;
   left?: React.ReactNode;
@@ -22,7 +21,6 @@ export const Input: FC<InputProps> = ({
   size = 'md',
   error = false,
   className,
-  clear = false,
   onChange,
   value,
   autoFocus = false,
@@ -46,8 +44,13 @@ export const Input: FC<InputProps> = ({
 
   return (
     <div className={rootClasses}>
-      {left && <div className={leftClasses}>{left}</div>}
+      {left && (
+        <div data-testid="input-left-content" className={leftClasses}>
+          {left}
+        </div>
+      )}
       <input
+        aria-label="input-component"
         autoFocus={autoFocus}
         {...props}
         value={value}

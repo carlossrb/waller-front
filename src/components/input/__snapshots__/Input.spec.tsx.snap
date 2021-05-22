@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render error input 1`] = `
+<input
+  aria-label="input-component"
+  class="w-full rounded-200 placeholder-gray200 block bg-backgroundColor100 focus:outline-none focus:bg-backgroundColor text-font300 px-200 py-300"
+  value=""
+/>
+`;
+
+exports[`Input should render input with focus 1`] = `
+<input
+  aria-label="input-component"
+  class="w-full rounded-200 placeholder-gray200 block bg-backgroundColor100 focus:outline-none focus:bg-backgroundColor text-font300 px-200 py-300"
+  value=""
+/>
+`;
+
+exports[`Input should render lg input 1`] = `
+<input
+  aria-label="input-component"
+  class="w-full rounded-200 placeholder-gray200 block bg-backgroundColor100 focus:outline-none focus:bg-backgroundColor text-font300 px-200 py-400"
+  value=""
+/>
+`;
+
+exports[`Input should render sm input 1`] = `
+<input
+  aria-label="input-component"
+  class="w-full rounded-200 placeholder-gray200 block bg-backgroundColor100 focus:outline-none focus:bg-backgroundColor text-font300 px-200 py-200"
+  value=""
+/>
+`;
+
+exports[`Input should render vanilla input 1`] = `
+<input
+  aria-label="input-component"
+  class="w-full rounded-200 placeholder-gray200 block bg-backgroundColor100 focus:outline-none focus:bg-backgroundColor text-font300 px-200 py-300"
+  value=""
+/>
+`;
+
+exports[`Input should render xs input 1`] = `
+<input
+  aria-label="input-component"
+  class="w-full rounded-200 placeholder-gray200 block bg-backgroundColor100 focus:outline-none focus:bg-backgroundColor text-font300 px-200 py-100"
+  value=""
+/>
+`;
