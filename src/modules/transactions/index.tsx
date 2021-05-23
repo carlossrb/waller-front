@@ -6,7 +6,24 @@ import { Withdraw } from './cards/Withdraw';
 import { Deposit } from './cards/Deposit';
 import { Payment } from './cards/Payment';
 
+import { useQuery, gql } from '@apollo/client';
+
+const BALANCE_QUERY = gql`
+  query GetAccountBalance {
+    getAccountBalance(id: "2") {
+      userEmail
+      userName
+      accountNumber
+      accountTotal
+      totalWithdrawn
+      accountTotalNoYieldRate
+    }
+  }
+`;
+
 const Transactions = () => {
+  const { loading, error, data } = useQuery(BALANCE_QUERY);
+  console.log(loading, error, data);
   return (
     <div>
       <DeskHeader />

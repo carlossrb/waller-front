@@ -10,7 +10,8 @@
     "build": "parcel build index.html",
     "lint": "eslint --fix --ext ts,tsx .",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate": "graphql-codegen"
   },
   "dependencies": {
     "@apollo/client": "^3.3.19",
@@ -29,6 +30,8 @@
     "@fullhuman/postcss-purgecss": "2.3.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.21.4",
+    "@graphql-codegen/typescript": "^1.22.0",
     "@tailwindcss/jit": "^0.1.17",
     "@tailwindcss/line-clamp": "^0.2.0",
     "@testing-library/jest-dom": "^5.12.0",
