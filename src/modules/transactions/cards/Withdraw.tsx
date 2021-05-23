@@ -42,7 +42,7 @@ export const Withdraw = () => {
 };
 
 export const ArrowBack: React.FC<{ onClick: () => void }> = ({ onClick }) => (
-  <button className="animate-bounceX p-300" onClick={onClick}>
+  <button className="hover:animate-bounceX p-300" onClick={onClick}>
     <img src={Back} />
   </button>
 );

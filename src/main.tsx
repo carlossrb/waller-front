@@ -7,7 +7,7 @@ import { ApolloProvider } from '@apollo/client/react';
 import './styles.css';
 
 const client = new ApolloClient({
-  uri: 'localhost:4000;graphql',
+  uri: 'localhost:4000/graphql',
   cache: new InMemoryCache(),
 });
 
