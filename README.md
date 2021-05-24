@@ -46,4 +46,5 @@ Dentre as diversas limitações, algumas podem ser levantadas para serem posteri
 - Autenticação e autorização em uma tela de login. Por questão de segurança, isso é super importante. Atualmente todas as requisições são feitas de forma direta, sem authorization/authentication, apenas para testar as suas funcionalidades;
 - Com um crescimento do projeto, um design system com os principais componentes utilizados;
 - Mais detalhes das transações. Como excemplo, seria interessante abrir um modal com todas as transações efetuadas e detalhes delas;
-- Usar um modelo de ssr com o crescimento da plataforma, ja que a pagina atualmente é um spa, o que pode atrasar um pouco o tempo de carregamento da mesmo, além de que o parcel não é tão interessante para projetos maiores.
+- Usar um modelo de ssr com o crescimento da plataforma, ja que a pagina atualmente é um spa, o que pode atrasar um pouco o tempo de carregamento da mesmo, além de que o parcel não é tão interessante para projetos maiores;
+- Continuous delivery para complementar com o CI já feito
