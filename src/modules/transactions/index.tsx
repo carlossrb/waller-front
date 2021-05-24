@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container } from './components/Container';
 import { DeskHeader } from './components/DeskHeader';
 import { StatementChart } from './cards/StatementChart';
@@ -26,6 +26,11 @@ const BALANCE_QUERY = gql`
   }
 `;
 
+type DynamicDataProps = {
+  accountTotal?: number;
+  totalWithdrawn?: number;
+  yields?: number;
+};
 type AccountBalanceContextProps = {
   userEmail?: string;
   userName?: string;
@@ -33,6 +38,7 @@ type AccountBalanceContextProps = {
   accountTotal?: number;
   totalWithdrawn?: number;
   accountTotalNoYieldRate?: number;
+  handleDynamicValues?: (payload: DynamicDataProps) => void;
 };
 
 const AccountBalanceContext = React.createContext<AccountBalanceContextProps>({
@@ -42,15 +48,29 @@ const AccountBalanceContext = React.createContext<AccountBalanceContextProps>({
   accountTotal: 0,
   totalWithdrawn: 0,
   accountTotalNoYieldRate: 0,
+  handleDynamicValues: () => 0,
 });
 
 export const useAccountBalanceContext = () => React.useContext(AccountBalanceContext);
 
 const Transactions = () => {
   const { loading, data } = useQuery<Query>(BALANCE_QUERY, { variables: { ID: ACCOUNT_ID } });
-  console.log(data?.getAccountBalance?.accountTotalNoYieldRate);
+  const [dynamicData, setDynamicData] = React.useState<DynamicDataProps>({
+    accountTotal: 0,
+    totalWithdrawn: 0,
+    yields: 0,
+  });
+
   const yieldRate = () => {
-    return (data?.getAccountBalance?.yields || 0).toFixed(2).replace('.', ',');
+    return (dynamicData.yields || 0).toFixed(2).replace('.', ',');
+  };
+
+  React.useEffect(() => {
+    setDynamicData({ ...data?.getAccountBalance });
+  }, [data]);
+
+  const handleDynamicValues = (payload: DynamicDataProps) => {
+    setDynamicData(payload);
   };
 
   return (
@@ -58,7 +78,7 @@ const Transactions = () => {
       {loading ? (
         <ScreenLoad />
       ) : (
-        <AccountBalanceContext.Provider value={{ ...data?.getAccountBalance }}>
+        <AccountBalanceContext.Provider value={{ ...data?.getAccountBalance, ...dynamicData, handleDynamicValues }}>
           <DeskHeader />
           <Container>
             <div className="text-font300 text-inputMoneyColor100 flex flex-col sm:flex-row justify-between">
