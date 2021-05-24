@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "predev": "rm -rf .parcel-cache",
+    "predev": "rm -rf .parcel-cache && yarn generate",
     "dev": "parcel serve index.html --no-source-maps --no-cache",
     "build": "parcel build index.html",
     "lint": "eslint --fix --ext ts,tsx .",
