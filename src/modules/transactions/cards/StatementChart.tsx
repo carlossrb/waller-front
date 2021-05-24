@@ -2,12 +2,12 @@ import { ResponsivePie } from '@nivo/pie';
 import React, { memo } from 'react';
 import { useAccountBalanceContext } from '..';
 
-export const StatementChart = () => {
+export const StatementChart = memo(() => {
   const { accountTotal, totalWithdrawn } = useAccountBalanceContext();
   const data = [
     {
       id: 'Entradas',
-      label: 'Entradas',
+      label: 'Entradas (com rendimento)',
       value: accountTotal?.toFixed(2),
       color: 'hsl(246, 70%, 50%)',
     },
@@ -62,4 +62,4 @@ export const StatementChart = () => {
       />
     </>
   );
-};
+});
