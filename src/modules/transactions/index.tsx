@@ -81,7 +81,7 @@ const Transactions = () => {
         <AccountBalanceContext.Provider value={{ ...data?.getAccountBalance, ...dynamicData, handleDynamicValues }}>
           <DeskHeader />
           <Container>
-            <div className="text-font300 text-inputMoneyColor100 flex flex-col sm:flex-row justify-between">
+            <div className="text-font300 bg-backgroundColor100 z-50 sticky top-0 text-inputMoneyColor100 flex flex-col sm:flex-row justify-between sm:relative sm:z-auto">
               <span>
                 Olá, <strong>{data?.getAccountBalance.userName}</strong>
               </span>
