@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 import { useAccountBalanceContext } from '..';
 
 export const StatementChart = memo(() => {
-  const { accountTotal, totalWithdrawn } = useAccountBalanceContext();
+  const { accountTotal, totalWithdrawal } = useAccountBalanceContext();
   const data = [
     {
       id: 'Entradas',
@@ -14,7 +14,7 @@ export const StatementChart = memo(() => {
     {
       id: 'Saídas',
       label: 'Saídas',
-      value: totalWithdrawn?.toFixed(2),
+      value: totalWithdrawal?.toFixed(2),
       color: 'hsl(150, 70%, 50%)',
     },
   ];

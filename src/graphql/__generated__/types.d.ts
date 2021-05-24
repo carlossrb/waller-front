@@ -23,7 +23,7 @@ export type Account = {
   accountTotal: Scalars['Float'];
   accountTotalNoYieldRate: Scalars['Float'];
   yields: Scalars['Float'];
-  totalWithdrawn: Scalars['Float'];
+  totalWithdrawal: Scalars['Float'];
   createdAt: Scalars['DateTime'];
   updatedAt?: Maybe<Scalars['DateTime']>;
 };

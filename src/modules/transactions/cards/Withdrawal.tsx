@@ -13,7 +13,7 @@ const WITHDRAWAL_MUTATION = gql`
       account {
         yields
         accountTotal
-        totalWithdrawn
+        totalWithdrawal
       }
     }
   }

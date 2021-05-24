@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Container } from './components/Container';
 import { DeskHeader } from './components/DeskHeader';
 import { StatementChart } from './cards/StatementChart';
-import { Withdraw } from './cards/Withdraw';
+import { Withdraw } from './cards/Withdrawal';
 import { Deposit } from './cards/Deposit';
 import { Payment } from './cards/Payment';
 
@@ -19,7 +19,7 @@ const BALANCE_QUERY = gql`
       userName
       accountNumber
       accountTotal
-      totalWithdrawn
+      totalWithdrawal
       accountTotalNoYieldRate
       yields
     }
@@ -28,7 +28,7 @@ const BALANCE_QUERY = gql`
 
 type DynamicDataProps = {
   accountTotal?: number;
-  totalWithdrawn?: number;
+  totalWithdrawal?: number;
   yields?: number;
 };
 type AccountBalanceContextProps = {
@@ -36,7 +36,7 @@ type AccountBalanceContextProps = {
   userName?: string;
   accountNumber?: string;
   accountTotal?: number;
-  totalWithdrawn?: number;
+  totalWithdrawal?: number;
   accountTotalNoYieldRate?: number;
   handleDynamicValues?: (payload: DynamicDataProps) => void;
 };
@@ -46,7 +46,7 @@ const AccountBalanceContext = React.createContext<AccountBalanceContextProps>({
   userName: '',
   accountNumber: '',
   accountTotal: 0,
-  totalWithdrawn: 0,
+  totalWithdrawal: 0,
   accountTotalNoYieldRate: 0,
   handleDynamicValues: () => 0,
 });
@@ -57,7 +57,7 @@ const Transactions = () => {
   const { loading, data } = useQuery<Query>(BALANCE_QUERY, { variables: { ID: ACCOUNT_ID } });
   const [dynamicData, setDynamicData] = React.useState<DynamicDataProps>({
     accountTotal: 0,
-    totalWithdrawn: 0,
+    totalWithdrawal: 0,
     yields: 0,
   });
 

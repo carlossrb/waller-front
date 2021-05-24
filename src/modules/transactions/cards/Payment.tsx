@@ -4,7 +4,7 @@ import { ACCOUNT_ID, useAccountBalanceContext } from '..';
 import { Button } from '../../../components/button/Button';
 import { Input } from '../../../components/input/Input';
 import { PaymentInput, PaymentPayload } from '../../../graphql/__generated__/types';
-import { ArrowBack } from './Withdraw';
+import { ArrowBack } from './Withdrawal';
 
 const PAYMENT_MUTATION = gql`
   mutation MakePayment($input: PaymentInput!) {
@@ -12,7 +12,7 @@ const PAYMENT_MUTATION = gql`
       account {
         yields
         accountTotal
-        totalWithdrawn
+        totalWithdrawal
       }
     }
   }
