@@ -3,6 +3,8 @@
 
 Waller é um sistema de teste para realização de transferências financeiras. Nele é possível realizar retirada, pagamentos, depósito, ver seus rendimentos totais e acompanhar por meio de gráfico as entradas (com rendimento) e saídas de sua conta. O logo foi gerado pelo site www.namelix.com
 
+O sistema é bastante simples, sendo apenas demonstrativo. Além diss, suas ações não deixam de ser lúdicas, representando operações financeiras. O intuito maior dessas ações é testar a aplicação, suas requisições, a arquitetura e legibilidade escolhida para o código, sua componentização, reutilização de código e utilização de tecnologias acopladas.
+
 ## Tech
 
 Waller lança mão de algumas tecnologias, aqui sendo as principais delas no front-end:
