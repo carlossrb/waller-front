@@ -9,10 +9,12 @@ import { Payment } from './cards/Payment';
 import { useQuery, gql } from '@apollo/client';
 import { Query } from '../../graphql/__generated__/types';
 
-//Id fixo
+//Id fixo (apenas teste). TODO: inserir sistema de autorização/autenticação
+export const ACCOUNT_ID = '2';
+
 const BALANCE_QUERY = gql`
-  query GetAccountBalance {
-    getAccountBalance(id: "2") {
+  query GetAccountBalance($ID: String!) {
+    getAccountBalance(id: $ID) {
       userEmail
       userName
       accountNumber
@@ -44,7 +46,7 @@ const AccountBalanceContext = React.createContext<AccountBalanceContextProps>({
 export const useAccountBalanceContext = () => React.useContext(AccountBalanceContext);
 
 const Transactions = () => {
-  const { loading, data } = useQuery<Query>(BALANCE_QUERY);
+  const { loading, data } = useQuery<Query>(BALANCE_QUERY, { variables: { ID: ACCOUNT_ID } });
 
   const yieldRate = () => {
     return ((data?.getAccountBalance?.accountTotal || 0) - (data?.getAccountBalance?.accountTotalNoYieldRate || 0))
