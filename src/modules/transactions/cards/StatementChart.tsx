@@ -8,13 +8,13 @@ export const StatementChart = memo(() => {
     {
       id: 'Entradas',
       label: 'Entradas',
-      value: accountTotal,
+      value: accountTotal?.toFixed(2),
       color: 'hsl(246, 70%, 50%)',
     },
     {
       id: 'Saídas',
       label: 'Saídas',
-      value: totalWithdrawn,
+      value: totalWithdrawn?.toFixed(2),
       color: 'hsl(150, 70%, 50%)',
     },
   ];
@@ -29,7 +29,7 @@ export const StatementChart = memo(() => {
         padAngle={1}
         cornerRadius={3}
         activeOuterRadiusOffset={8}
-        valueFormat={(number) => String(number) + ' R$'}
+        valueFormat={(number) => String(number).replace('.', ',') + ' R$'}
         colors={{ scheme: 'accent' }}
         borderWidth={1}
         borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}

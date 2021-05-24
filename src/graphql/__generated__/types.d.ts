@@ -22,9 +22,50 @@ export type Account = {
   operationDate: Scalars['String'];
   accountTotal: Scalars['Float'];
   accountTotalNoYieldRate: Scalars['Float'];
+  yields: Scalars['Float'];
   totalWithdrawn: Scalars['Float'];
   createdAt: Scalars['DateTime'];
   updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type DepositInput = {
+  id: Scalars['ID'];
+  amount: Scalars['String'];
+};
+
+export type DepositPayload = {
+  __typename?: 'DepositPayload';
+  account?: Maybe<Account>;
+};
+
+export type Mutation = {
+  __typename?: 'Mutation';
+  makeDeposit: DepositPayload;
+  makePayment: PaymentPayload;
+  makeWithdrawal: WithdrawalPayload;
+};
+
+export type MutationMakeDepositArgs = {
+  input: DepositInput;
+};
+
+export type MutationMakePaymentArgs = {
+  input: PaymentInput;
+};
+
+export type MutationMakeWithdrawalArgs = {
+  input: WithdrawalInput;
+};
+
+export type PaymentInput = {
+  id: Scalars['ID'];
+  amount: Scalars['String'];
+  target: Scalars['String'];
+};
+
+export type PaymentPayload = {
+  __typename?: 'PaymentPayload';
+  account?: Maybe<Account>;
 };
 
 export type Query = {
@@ -34,4 +75,14 @@ export type Query = {
 
 export type QueryGetAccountBalanceArgs = {
   id: Scalars['String'];
+};
+
+export type WithdrawalInput = {
+  id: Scalars['ID'];
+  amount: Scalars['String'];
+};
+
+export type WithdrawalPayload = {
+  __typename?: 'WithdrawalPayload';
+  account?: Maybe<Account>;
 };
