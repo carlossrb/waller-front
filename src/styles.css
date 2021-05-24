@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './loader.css';
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,3 +11,4 @@ body {
   color: theme('colors.white');
   background-color: theme('colors.backgroundColor');
 }
+
