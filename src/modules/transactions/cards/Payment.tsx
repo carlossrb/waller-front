@@ -63,10 +63,12 @@ export const Payment = () => {
             type="submit"
             size="xs"
             onClick={async () => {
-              const makepayment = await makePayment();
-              handleDynamicValues!({ ...(makepayment as any).data?.makePayment.account });
-              setStatusMsg(true);
-              setTimeout(() => setStatusMsg(false), 4000);
+              if (target && amount) {
+                const makepayment = await makePayment();
+                handleDynamicValues!({ ...(makepayment as any).data?.makePayment.account });
+                setStatusMsg(true);
+                setTimeout(() => setStatusMsg(false), 4000);
+              }
             }}
           >
             Pagar agora!

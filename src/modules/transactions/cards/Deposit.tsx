@@ -54,10 +54,12 @@ export const Deposit = () => {
           type="submit"
           kind="secondary"
           onClick={async () => {
-            const makedeposit = await makeDeposit();
-            handleDynamicValues!({ ...(makedeposit as any).data?.makeDeposit.account });
-            setStatusMsg(true);
-            setTimeout(() => setStatusMsg(false), 4000);
+            if (amount) {
+              const makedeposit = await makeDeposit();
+              handleDynamicValues!({ ...(makedeposit as any).data?.makeDeposit.account });
+              setStatusMsg(true);
+              setTimeout(() => setStatusMsg(false), 4000);
+            }
           }}
         >
           Depositar agora!

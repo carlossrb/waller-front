@@ -64,10 +64,12 @@ export const Withdraw = () => {
             full
             type="submit"
             onClick={async () => {
-              const withdrawal = await makeWithdrawal();
-              handleDynamicValues!({ ...(withdrawal as any).data?.makeWithdrawal.account });
-              setStatusMsg(true);
-              setTimeout(() => setStatusMsg(false), 4000);
+              if (amount) {
+                const withdrawal = await makeWithdrawal();
+                handleDynamicValues!({ ...(withdrawal as any).data?.makeWithdrawal.account });
+                setStatusMsg(true);
+                setTimeout(() => setStatusMsg(false), 4000);
+              }
             }}
           >
             Retirar agora!
