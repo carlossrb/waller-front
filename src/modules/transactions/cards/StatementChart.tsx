@@ -7,7 +7,7 @@ export const StatementChart = memo(() => {
   const data = [
     {
       id: 'Entradas',
-      label: 'Entradas (com rendimento)',
+      label: 'Entradas',
       value: accountTotal?.toFixed(2),
       color: 'hsl(246, 70%, 50%)',
     },
@@ -44,7 +44,7 @@ export const StatementChart = memo(() => {
         }}
         legends={[
           {
-            anchor: 'bottom',
+            anchor: 'bottom-left',
             direction: 'row',
             justify: false,
             translateX: 0,

@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "predev": "rm -rf .parcel-cache && yarn generate",
-    "dev": "parcel serve index.html --no-source-maps --no-cache",
-    "build": "parcel build index.html",
+    "dev": "parcel serve ./public/index.html --no-source-maps --no-cache",
+    "build": "parcel build ./public/index.html",
     "lint": "eslint --fix --ext ts,tsx .",
     "test": "jest",
     "prepare": "husky install",
